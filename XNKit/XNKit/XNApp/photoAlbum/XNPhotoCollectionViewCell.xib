@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gTV-IL-0wX" customClass="XNPhotoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="201" height="180"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="59s-jk-AhG">
+                        <rect key="frame" x="0.0" y="0.0" width="201" height="180"/>
+                        <gestureRecognizers/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_added_01@2x" translatesAutoresizingMaskIntoConstraints="NO" id="bwT-vb-pZF">
+                        <rect key="frame" x="178" y="0.0" width="23" height="22"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="23" id="H3h-Gb-J9g"/>
+                            <constraint firstAttribute="height" constant="22" id="ccq-Mq-XWg"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bwT-vb-pZF" secondAttribute="trailing" id="AtO-dh-UzD"/>
+                <constraint firstAttribute="bottom" secondItem="59s-jk-AhG" secondAttribute="bottom" id="NL3-SX-wr8"/>
+                <constraint firstItem="59s-jk-AhG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pe8-Ei-NP0"/>
+                <constraint firstItem="bwT-vb-pZF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="a3U-jV-og8"/>
+                <constraint firstItem="59s-jk-AhG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="brp-QE-Xgz"/>
+                <constraint firstAttribute="trailing" secondItem="59s-jk-AhG" secondAttribute="trailing" id="q7W-8C-Vao"/>
+            </constraints>
+            <size key="customSize" width="201" height="180"/>
+            <connections>
+                <outlet property="photoImageView" destination="59s-jk-AhG" id="1mv-rX-gOY"/>
+                <outlet property="selectedBtn" destination="bwT-vb-pZF" id="AVY-ux-YIr"/>
+            </connections>
+            <point key="canvasLocation" x="-184" y="17"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="user_added_01@2x" width="16" height="16"/>
+    </resources>
+</document>
