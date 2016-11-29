@@ -1,22 +1,22 @@
 //
-//  NXlaunchViewController.m
+//  XNBlueToothViewController.m
 //  XNKit
 //
-//  Created by 小鸟 on 2016/11/28.
+//  Created by 小鸟 on 2016/11/29.
 //  Copyright © 2016年 小鸟. All rights reserved.
 //
 
-#import "NXlaunchViewController.h"
+#import "XNBlueToothViewController.h"
 
-@interface NXlaunchViewController ()
+@interface XNBlueToothViewController ()
 
 @end
 
-@implementation NXlaunchViewController
+@implementation XNBlueToothViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
