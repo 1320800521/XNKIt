@@ -17,6 +17,7 @@
                 <outlet property="VPlayBtn" destination="gQN-ZZ-RuH" id="L0Z-Xu-bQC"/>
                 <outlet property="bottomSpace" destination="s2d-YJ-Vmt" id="Cjl-Sz-Eg2"/>
                 <outlet property="centerPlayBtn" destination="uUD-cj-SN5" id="Pbx-li-Z1A"/>
+                <outlet property="rate" destination="ON5-N0-55w" id="tSd-bw-Xb4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -58,6 +59,12 @@
                                 <action selector="nextBtnClick:" destination="-1" eventType="touchUpInside" id="1Gg-L5-f1x"/>
                             </connections>
                         </button>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ON5-N0-55w">
+                            <rect key="frame" x="18" y="-7" width="339" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="QcP-ne-pdc"/>
+                            </constraints>
+                        </slider>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="tintColor" red="0.90980392160000001" green="0.2666666667" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,7 +75,10 @@
                         <constraint firstItem="QXn-Ad-TsV" firstAttribute="leading" secondItem="gQN-ZZ-RuH" secondAttribute="trailing" constant="1" id="BqT-py-gIS"/>
                         <constraint firstAttribute="height" constant="60" id="Cln-LT-iXP"/>
                         <constraint firstItem="gQN-ZZ-RuH" firstAttribute="top" secondItem="Z6g-Nt-cfk" secondAttribute="top" constant="15" id="GSK-6S-8HZ"/>
+                        <constraint firstAttribute="trailing" secondItem="ON5-N0-55w" secondAttribute="trailing" constant="20" id="K2W-xA-ffZ"/>
                         <constraint firstItem="gQN-ZZ-RuH" firstAttribute="leading" secondItem="UCO-Eo-d6b" secondAttribute="trailing" id="M0R-kV-dhB"/>
+                        <constraint firstItem="ON5-N0-55w" firstAttribute="top" secondItem="Z6g-Nt-cfk" secondAttribute="top" constant="-7" id="ZI3-OX-Eoq"/>
+                        <constraint firstItem="ON5-N0-55w" firstAttribute="leading" secondItem="Z6g-Nt-cfk" secondAttribute="leading" constant="20" id="shR-1r-Zqa"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUD-cj-SN5">
@@ -87,7 +97,7 @@
                 <constraint firstAttribute="bottom" secondItem="Z6g-Nt-cfk" secondAttribute="bottom" id="s2d-YJ-Vmt"/>
                 <constraint firstAttribute="trailing" secondItem="Z6g-Nt-cfk" secondAttribute="trailing" id="yRf-cp-Yrt"/>
             </constraints>
-            <point key="canvasLocation" x="201" y="-48"/>
+            <point key="canvasLocation" x="35" y="-30"/>
         </view>
     </objects>
     <resources>

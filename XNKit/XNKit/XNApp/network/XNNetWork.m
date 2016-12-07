@@ -10,4 +10,13 @@
 
 @implementation XNNetWork
 
+
+
++ (void)getDataWithUrl:(NSString *)urlString pram:(id)pram success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+               failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure{
+
+};
+
+
+
 @end

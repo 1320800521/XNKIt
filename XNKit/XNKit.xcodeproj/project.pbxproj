@@ -61,12 +61,19 @@
 		8B9B4EE71DC9EF65000648DB /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4EE51DC9EF65000648DB /* ProgressHUD.m */; };
 		8B9B4EEA1DC9EF8F000648DB /* MBProgressHUD+XNHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4EE91DC9EF8F000648DB /* MBProgressHUD+XNHub.m */; };
 		8B9B4EED1DC9F7D4000648DB /* UIButton+XNButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4EEC1DC9F7D4000648DB /* UIButton+XNButton.m */; };
+		8B9CB2D71DEC269F00E85E8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9CB2D61DEC269F00E85E8C /* ViewController.m */; };
 		8BB7A3821DE8117A00D7E353 /* XNTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB7A3811DE8117A00D7E353 /* XNTouchButton.m */; };
 		8BBC89491DCC66EC00459E7F /* UIAlertView+XNBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC89481DCC66EC00459E7F /* UIAlertView+XNBlock.m */; };
 		8BBC894C1DCC7B6C00459E7F /* XNAttributeText.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC894B1DCC7B6C00459E7F /* XNAttributeText.m */; };
 		8BC141761DD9BC480016A949 /* qrcode_scanline_barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC141741DD9BC480016A949 /* qrcode_scanline_barcode@2x.png */; };
 		8BC141771DD9BC480016A949 /* qrcode_scanline_barcode@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC141751DD9BC480016A949 /* qrcode_scanline_barcode@3x.png */; };
+		8BC5813B1DED22080026A66C /* XNVideoLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC581391DED22080026A66C /* XNVideoLaunchViewController.m */; };
+		8BC5813C1DED22080026A66C /* XNVideoLaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC5813A1DED22080026A66C /* XNVideoLaunchViewController.xib */; };
+		8BC5813E1DED5DB20026A66C /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8BC5813D1DED5DB20026A66C /* 1.mp4 */; };
+		8BC5814D1DED85990026A66C /* XNBlueToothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC5814B1DED85990026A66C /* XNBlueToothViewController.m */; };
+		8BC5814E1DED85990026A66C /* XNBlueToothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC5814C1DED85990026A66C /* XNBlueToothViewController.xib */; };
 		8BE6469E1DC8997B0069B61A /* XNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE6469D1DC8997B0069B61A /* XNViewController.m */; };
+		8BED6C0C1DEFD48100E50D55 /* XNNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED6C0B1DEFD48100E50D55 /* XNNetWork.m */; };
 		8BF6815F1DDC0AEE00852B45 /* XNQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6815E1DDC0AEE00852B45 /* XNQRCodeViewController.m */; };
 		8BF681621DDC433400852B45 /* bg_scanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BF681611DDC433400852B45 /* bg_scanner@2x.png */; };
 /* End PBXBuildFile section */
@@ -120,7 +127,6 @@
 		8B66B6D11DDD9C3100033591 /* XNAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNAlbumViewController.h; sourceTree = "<group>"; };
 		8B66B6D21DDD9C3100033591 /* XNAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNAlbumViewController.m; sourceTree = "<group>"; };
 		8B703A621DCB18E200ECB221 /* 000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 000.png; sourceTree = "<group>"; };
-		8B7925BC1DE3F57D00FEFB0C /* WeChatSight1070.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WeChatSight1070.mp4; sourceTree = "<group>"; };
 		8B910A321DCB3B1900C45A30 /* UITextField+XNTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XNTextField.h"; sourceTree = "<group>"; };
 		8B910A331DCB3B1900C45A30 /* UITextField+XNTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XNTextField.m"; sourceTree = "<group>"; };
 		8B910A351DCB3CB800C45A30 /* UIActionSheet+XNActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+XNActionSheet.h"; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 		8B9B4EE91DC9EF8F000648DB /* MBProgressHUD+XNHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XNHub.m"; sourceTree = "<group>"; };
 		8B9B4EEB1DC9F7D4000648DB /* UIButton+XNButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XNButton.h"; sourceTree = "<group>"; };
 		8B9B4EEC1DC9F7D4000648DB /* UIButton+XNButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XNButton.m"; sourceTree = "<group>"; };
+		8B9CB2D51DEC269F00E85E8C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8B9CB2D61DEC269F00E85E8C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8BB7A3801DE8117A00D7E353 /* XNTouchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XNTouchButton.h; path = image/XNTouchButton.h; sourceTree = "<group>"; };
 		8BB7A3811DE8117A00D7E353 /* XNTouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XNTouchButton.m; path = image/XNTouchButton.m; sourceTree = "<group>"; };
 		8BBC89471DCC66EC00459E7F /* UIAlertView+XNBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+XNBlock.h"; sourceTree = "<group>"; };
@@ -180,8 +188,17 @@
 		8BBC894B1DCC7B6C00459E7F /* XNAttributeText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNAttributeText.m; sourceTree = "<group>"; };
 		8BC141741DD9BC480016A949 /* qrcode_scanline_barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scanline_barcode@2x.png"; sourceTree = "<group>"; };
 		8BC141751DD9BC480016A949 /* qrcode_scanline_barcode@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scanline_barcode@3x.png"; sourceTree = "<group>"; };
+		8BC581381DED22080026A66C /* XNVideoLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNVideoLaunchViewController.h; sourceTree = "<group>"; };
+		8BC581391DED22080026A66C /* XNVideoLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNVideoLaunchViewController.m; sourceTree = "<group>"; };
+		8BC5813A1DED22080026A66C /* XNVideoLaunchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XNVideoLaunchViewController.xib; sourceTree = "<group>"; };
+		8BC5813D1DED5DB20026A66C /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
+		8BC5814A1DED85990026A66C /* XNBlueToothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNBlueToothViewController.h; sourceTree = "<group>"; };
+		8BC5814B1DED85990026A66C /* XNBlueToothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNBlueToothViewController.m; sourceTree = "<group>"; };
+		8BC5814C1DED85990026A66C /* XNBlueToothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XNBlueToothViewController.xib; sourceTree = "<group>"; };
 		8BE6469C1DC8997B0069B61A /* XNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNViewController.h; sourceTree = "<group>"; };
 		8BE6469D1DC8997B0069B61A /* XNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNViewController.m; sourceTree = "<group>"; };
+		8BED6C0A1DEFD48100E50D55 /* XNNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNNetWork.h; sourceTree = "<group>"; };
+		8BED6C0B1DEFD48100E50D55 /* XNNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNNetWork.m; sourceTree = "<group>"; };
 		8BF6815D1DDC0AEE00852B45 /* XNQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNQRCodeViewController.h; sourceTree = "<group>"; };
 		8BF6815E1DDC0AEE00852B45 /* XNQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNQRCodeViewController.m; sourceTree = "<group>"; };
 		8BF681611DDC433400852B45 /* bg_scanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_scanner@2x.png"; sourceTree = "<group>"; };
@@ -216,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				8B991F381DE537D800069A2F /* image */,
-				8B7925BC1DE3F57D00FEFB0C /* WeChatSight1070.mp4 */,
 				8BB7A3801DE8117A00D7E353 /* XNTouchButton.h */,
 				8BB7A3811DE8117A00D7E353 /* XNTouchButton.m */,
 				8B991F331DE5334900069A2F /* XNPlayerViewController.h */,
@@ -256,6 +272,8 @@
 				8B075A171DD0418500459F2C /* testConViewController.m */,
 				8B075A181DD0418500459F2C /* testConViewController.xib */,
 				8B4D84271DC743BD009A7A8E /* Main.storyboard */,
+				8B9CB2D51DEC269F00E85E8C /* ViewController.h */,
+				8B9CB2D61DEC269F00E85E8C /* ViewController.m */,
 				8B703A621DCB18E200ECB221 /* 000.png */,
 				8B4D842A1DC743BD009A7A8E /* Assets.xcassets */,
 				8B4D842C1DC743BD009A7A8E /* LaunchScreen.storyboard */,
@@ -294,6 +312,9 @@
 		8B4D84511DC74F72009A7A8E /* XNApp */ = {
 			isa = PBXGroup;
 			children = (
+				8BED6C091DEFD41000E50D55 /* network */,
+				8BC581441DED7FA70026A66C /* blueTooth */,
+				8BC581371DED21730026A66C /* launch */,
 				8B991F711DE5419700069A2F /* PrefixHeader.pch */,
 				8B3B23C61DDEE6F50012DD5C /* plaayer */,
 				8B66B6C31DDD93F200033591 /* photoAlbum */,
@@ -412,6 +433,27 @@
 			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
+		8BC581371DED21730026A66C /* launch */ = {
+			isa = PBXGroup;
+			children = (
+				8BC5813D1DED5DB20026A66C /* 1.mp4 */,
+				8BC581381DED22080026A66C /* XNVideoLaunchViewController.h */,
+				8BC581391DED22080026A66C /* XNVideoLaunchViewController.m */,
+				8BC5813A1DED22080026A66C /* XNVideoLaunchViewController.xib */,
+			);
+			path = launch;
+			sourceTree = "<group>";
+		};
+		8BC581441DED7FA70026A66C /* blueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				8BC5814A1DED85990026A66C /* XNBlueToothViewController.h */,
+				8BC5814B1DED85990026A66C /* XNBlueToothViewController.m */,
+				8BC5814C1DED85990026A66C /* XNBlueToothViewController.xib */,
+			);
+			path = blueTooth;
+			sourceTree = "<group>";
+		};
 		8BE6469B1DC8987F0069B61A /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +466,15 @@
 				8BF6815E1DDC0AEE00852B45 /* XNQRCodeViewController.m */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		8BED6C091DEFD41000E50D55 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				8BED6C0A1DEFD48100E50D55 /* XNNetWork.h */,
+				8BED6C0B1DEFD48100E50D55 /* XNNetWork.m */,
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +546,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 34G44GF43M;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					8B4D84331DC743BD009A7A8E = {
 						CreatedOnToolsVersion = 8.0;
@@ -540,6 +596,7 @@
 				8B66B6C81DDD952300033591 /* XNPhotoCollectionViewCell.xib in Resources */,
 				8B991F631DE537D900069A2F /* brightness@2x.png in Resources */,
 				8B991F681DE537D900069A2F /* player-lock@3x.png in Resources */,
+				8BC5813E1DED5DB20026A66C /* 1.mp4 in Resources */,
 				8BC141761DD9BC480016A949 /* qrcode_scanline_barcode@2x.png in Resources */,
 				8B991F641DE537D900069A2F /* brightness@3x.png in Resources */,
 				8B991F371DE5334900069A2F /* XNPlayerViewController.xib in Resources */,
@@ -549,6 +606,7 @@
 				8B4D842B1DC743BD009A7A8E /* Assets.xcassets in Resources */,
 				8B991F6A1DE537D900069A2F /* rewind@3x.png in Resources */,
 				8B66B6CE1DDD9B5B00033591 /* user_added_01@3x.png in Resources */,
+				8BC5814E1DED85990026A66C /* XNBlueToothViewController.xib in Resources */,
 				8B991F6D1DE537D900069A2F /* volume@2x.png in Resources */,
 				8B703A631DCB18E200ECB221 /* 000.png in Resources */,
 				8B991F691DE537D900069A2F /* rewind@2x.png in Resources */,
@@ -560,6 +618,7 @@
 				8B991F581DE537D900069A2F /* fullscreen@3x.png in Resources */,
 				8B991F6F1DE537D900069A2F /* volumeMute@2x.png in Resources */,
 				8B66B6CD1DDD9B5B00033591 /* user_added_01@2x.png in Resources */,
+				8BC5813C1DED22080026A66C /* XNVideoLaunchViewController.xib in Resources */,
 				8BC141771DD9BC480016A949 /* qrcode_scanline_barcode@3x.png in Resources */,
 				8B66B6CF1DDD9B5B00033591 /* user_added_02@2x.png in Resources */,
 				8B4D84291DC743BD009A7A8E /* Main.storyboard in Resources */,
@@ -593,6 +652,7 @@
 				8BE6469E1DC8997B0069B61A /* XNViewController.m in Sources */,
 				8BBC89491DCC66EC00459E7F /* UIAlertView+XNBlock.m in Sources */,
 				8B9B4ED91DC9D288000648DB /* UIView+XNView.m in Sources */,
+				8BED6C0C1DEFD48100E50D55 /* XNNetWork.m in Sources */,
 				8B1516931DD46B0D00F37C40 /* XNQRCode.m in Sources */,
 				8B9B4EEA1DC9EF8F000648DB /* MBProgressHUD+XNHub.m in Sources */,
 				8B9B4ECD1DC99903000648DB /* UIImage+XNImage.m in Sources */,
@@ -604,9 +664,12 @@
 				8B910A3C1DCB3E0200C45A30 /* UIBadgeView.m in Sources */,
 				8B9B4ED61DC9C3CD000648DB /* UIColor+XNColor.m in Sources */,
 				8BB7A3821DE8117A00D7E353 /* XNTouchButton.m in Sources */,
+				8B9CB2D71DEC269F00E85E8C /* ViewController.m in Sources */,
 				8B9B4EE01DC9D902000648DB /* NSString+XNString.m in Sources */,
 				8B4D84231DC743BD009A7A8E /* AppDelegate.m in Sources */,
+				8BC5813B1DED22080026A66C /* XNVideoLaunchViewController.m in Sources */,
 				8B9B4EE61DC9EF65000648DB /* MBProgressHUD.m in Sources */,
+				8BC5814D1DED85990026A66C /* XNBlueToothViewController.m in Sources */,
 				8B9B4EE71DC9EF65000648DB /* ProgressHUD.m in Sources */,
 				8BBC894C1DCC7B6C00459E7F /* XNAttributeText.m in Sources */,
 				8B991F361DE5334900069A2F /* XNPlayerViewController.m in Sources */,

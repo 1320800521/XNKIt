@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XNBlueToothViewController">
             <connections>
+                <outlet property="imageView" destination="97p-57-EqN" id="pw0-ld-WZJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +20,39 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdS-a5-PRD">
-                    <rect key="frame" x="114" y="139" width="31" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdS-a5-PRD">
+                    <rect key="frame" x="78" y="110" width="31" height="30"/>
                     <state key="normal" title="搜索"/>
+                    <connections>
+                        <action selector="find:" destination="-1" eventType="touchUpInside" id="Sii-1i-1MF"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3E4-Yo-oFk">
-                    <rect key="frame" x="114" y="227" width="31" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3E4-Yo-oFk">
+                    <rect key="frame" x="217" y="110" width="31" height="30"/>
                     <state key="normal" title="发送"/>
+                    <connections>
+                        <action selector="send:" destination="-1" eventType="touchUpInside" id="AuQ-XW-hsf"/>
+                        <action selector="sendData:" destination="-1" eventType="touchUpInside" id="2J9-sT-fBS"/>
+                    </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="97p-57-EqN">
+                    <rect key="frame" x="61" y="188" width="240" height="128"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="97p-57-EqN" secondAttribute="bottom" constant="351" id="1Vg-Zh-WE5"/>
+                <constraint firstItem="97p-57-EqN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="6Ok-Fq-PR1"/>
+                <constraint firstItem="97p-57-EqN" firstAttribute="top" secondItem="3E4-Yo-oFk" secondAttribute="bottom" constant="48" id="MKa-En-qLK"/>
+                <constraint firstAttribute="trailing" secondItem="97p-57-EqN" secondAttribute="trailing" constant="74" id="McL-Uu-AwA"/>
+                <constraint firstItem="LdS-a5-PRD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="NGJ-Xd-Ylo"/>
+                <constraint firstItem="97p-57-EqN" firstAttribute="top" secondItem="LdS-a5-PRD" secondAttribute="bottom" constant="48" id="Pte-nS-KVo"/>
+                <constraint firstItem="97p-57-EqN" firstAttribute="top" secondItem="3E4-Yo-oFk" secondAttribute="bottom" constant="48" id="Wfe-XN-rrt"/>
+                <constraint firstAttribute="trailing" secondItem="3E4-Yo-oFk" secondAttribute="trailing" constant="127" id="ZHF-AK-Znf"/>
+                <constraint firstItem="LdS-a5-PRD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="78" id="b2Z-fI-9q0"/>
+                <constraint firstItem="3E4-Yo-oFk" firstAttribute="leading" secondItem="LdS-a5-PRD" secondAttribute="trailing" constant="108" id="r7U-oj-9Ks"/>
+                <constraint firstItem="3E4-Yo-oFk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="sO3-pR-ATa"/>
+            </constraints>
         </view>
     </objects>
 </document>

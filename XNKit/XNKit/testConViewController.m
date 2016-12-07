@@ -43,8 +43,6 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"XNPhotoCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     [self.view addSubview:self.collectionView];
     
-//    [self getOriginalImages];
-
 }
 
 - (void)selectPhoto{

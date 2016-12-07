@@ -10,6 +10,7 @@
 #import "XNAlbumViewController.h"
 #import "testConViewController.h"
 #import "XNPlayerViewController.h"
+#import "XNVideoLaunchViewController.h"
 //#import <>
 
 @interface AppDelegate ()
@@ -23,12 +24,12 @@
     // Override point for customization after application launch.
     
     
+    //设置启动图时间
+    [NSThread sleepForTimeInterval:1.0];
     
-    XNPlayerViewController *testVC = [[XNPlayerViewController alloc]init];
-    
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:testVC];
-    
-    self.window.rootViewController = testVC;
+    XNVideoLaunchViewController *root = [[XNVideoLaunchViewController alloc] init];
+     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:root];
+    self.window.rootViewController = nav;
     
     
     return YES;

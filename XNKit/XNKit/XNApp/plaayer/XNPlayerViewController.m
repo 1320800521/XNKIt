@@ -45,6 +45,10 @@ typedef NS_ENUM(NSUInteger, Direction) {
  */
 @property (weak, nonatomic) IBOutlet UIButton *VNextBtn;
 
+/**
+ 播放进度
+ */
+@property (weak, nonatomic) IBOutlet UISlider *rate;
 @property (nonatomic, strong) XNTouchButton *controlBtn;
 
 @property (assign, nonatomic) Direction direction;
@@ -57,9 +61,16 @@ typedef NS_ENUM(NSUInteger, Direction) {
 
 @property (assign, nonatomic) CGFloat currentRate;//当期视频播放的进度
 
+@property (nonatomic,strong) UIImageView *brightView;
+
 @property (assign, nonatomic) CGFloat startVB;
 
 @property (assign, nonatomic) CGFloat startVideoRate;
+
+/**
+ 进度
+ */
+@property (strong, nonatomic) UIImageView *ratImageView;
 
 /**
  是否正在播放
@@ -101,6 +112,8 @@ typedef NS_ENUM(NSUInteger, Direction) {
     [self.VPlayBtn setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     [self.VNextBtn setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     [self.centerPlayBtn setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+    self.rate.value = 0;
+    [self.rate setThumbImage:[UIImage imageNamed:@"point"] forState:UIControlStateNormal];
     
     // 屏幕旋转
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didRotate) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
@@ -125,8 +138,7 @@ typedef NS_ENUM(NSUInteger, Direction) {
     //    tapGes.delegate = self;
     tapDouble.numberOfTapsRequired = 2;
     [self.controlBtn addGestureRecognizer:tapDouble];
-    
-    
+ 
 }
 
 
@@ -140,15 +152,26 @@ typedef NS_ENUM(NSUInteger, Direction) {
     if (self.startPoint.x <= self.controlBtn.frame.size.width / 2.0) {
         //音/量
         self.startVB = self.volumeViewSlider.value;
+        
+        self.volumeViewSlider.hidden = NO;
+        self.brightView.hidden = YES;
+        
     } else {
         //亮度
         self.startVB = [UIScreen mainScreen].brightness;
+        
+        self.volumeViewSlider.hidden = YES;
+        self.brightView.hidden = NO;
+        
     }
     //方向置为无
     self.direction = DirectionNone;
     //记录当前视频播放的进度
     CMTime ctime = self.player.currentTime;
-    self.startVideoRate = ctime.value / ctime.timescale / CMTimeGetSeconds(self.player.currentItem.duration);;
+    self.startVideoRate = ctime.value / ctime.timescale / CMTimeGetSeconds(self.player.currentItem.duration);
+    
+    self.rate.minimumValue = 0;
+    
     
 }
 
@@ -157,6 +180,9 @@ typedef NS_ENUM(NSUInteger, Direction) {
     if (self.direction == DirectionLeftOrRight) {
         [self.player seekToTime:CMTimeMakeWithSeconds(CMTimeGetSeconds(self.player.currentItem.duration) * self.currentRate, NSEC_PER_SEC) completionHandler:^(BOOL finished) {
             //在这里处理进度设置成功后的事情
+            self.volumeViewSlider.hidden = YES;
+            
+            self.brightView.hidden = YES;
         }];
     }
 }
@@ -202,19 +228,17 @@ typedef NS_ENUM(NSUInteger, Direction) {
         if (self.startPoint.x <= self.controlBtn.frame.size.width / 2.0) {
             //音量
             if (panPoint.y > 0) {
-                
                 self.volumeViewSlider.hidden = NO;
                 
                 //增大音量
-//                [self.volumeViewSlider setValue:self.startVB + (-panPoint.y / 30.0 / 10) animated:YES];
                 if (self.startVB + (-panPoint.y / 30 / 10) - self.volumeViewSlider.value >= 0.1) {
                     
                     self.player.volume = self.startVB + (-panPoint.y / 30.0 / 10);
                 }
-                
                 self.player.volume = self.startVB + (-panPoint.y / 30.0 / 10);
                 
-                NSLog(@"音量 +++++++++ %f",self.player.volume);
+                self.player.volume = self.volumeViewSlider.value;
+                self.volumeViewSlider.minimumValueImage = [UIImage imageNamed:@"volume"];
                 
             } else {
                 //减少音量
@@ -222,28 +246,29 @@ typedef NS_ENUM(NSUInteger, Direction) {
                 
                 self.player.volume = self.startVB - (panPoint.y / 30.0 / 10);
                 
-                NSLog(@"音量 --------- %f",self.player.volume);
+                if (self.player.volume == 0) {
+//                    self.player.volume = self.volumeViewSlider.value;
+                    self.volumeViewSlider.minimumValueImage = [UIImage imageNamed:@"volumeMute"];
+                }
             }
          
-            self.volumeViewSlider.value = self.player.volume;
-            
-            [UIView animateWithDuration:3 animations:^{
-//                处理隐藏
-                self.volumeViewSlider.hidden = YES;
-            } completion:^(BOOL finished)
-             {
-//                 动画结束处理  可以重新执行另一个动画
-             }];
-            
         } else if(YES){
-            
             //调节亮度
             if (panPoint.y < 0) {
                 //增加亮度
                 [[UIScreen mainScreen] setBrightness:self.startVB + (-panPoint.y / 30.0 / 10)];
+                
+                CGSize size = self.brightView.image.size;
+                
+                self.brightView.frame = CGRectMake(self.brightView.frame.origin.x, self.brightView.frame.origin.y, size.width + 0.1, size.height + 0.1);
+                
             } else {
                 //减少亮度
                 [[UIScreen mainScreen] setBrightness:self.startVB - (panPoint.y / 30.0 / 10)];
+                
+                CGSize size = self.brightView.image.size;
+                
+                self.brightView.frame = CGRectMake(self.brightView.frame.origin.x, self.brightView.frame.origin.y, size.width - 0.1, size.height - 0.1);
             }
         }
     } else if (self.direction == DirectionLeftOrRight ) {
@@ -255,6 +280,17 @@ typedef NS_ENUM(NSUInteger, Direction) {
             rate = 0;
         }
         self.currentRate = rate;
+        self.ratImageView.backgroundColor = [UIColor redColor];
+        [UIView transitionWithView:self.ratImageView duration:3.0 options:UIViewAnimationOptionRepeat animations:^{
+                         //执行的动画
+            
+            self.ratImageView.hidden = NO;
+            self.ratImageView.image = [UIImage imageNamed:@"fastForward"];
+
+                     } completion:^(BOOL finished) {
+                             //动画执行完毕后的首位操作
+                             self.ratImageView.hidden = YES;
+            }];
     }
 }
 
@@ -301,42 +337,48 @@ typedef NS_ENUM(NSUInteger, Direction) {
     self.volumeViewSlider.center = CGPointMake(KSCREEN_WIDTH / 2, 100);
     self.volumeViewSlider.backgroundColor = [UIColor whiteColor];
     self.volumeViewSlider.minimumValueImage = [UIImage imageNamed:@"point"];
-//    - (void)setMaximumTrackImage:(UIImage *)image forState:(UIControlState)state;
-//    self.volumeViewSlider setmax
     self.volumeViewSlider.transform = CGAffineTransformMakeRotation(M_PI/2);
-    [self.view addSubview:self.volumeViewSlider];
+//    [self.view addSubview:self.volumeViewSlider];
+    
+    // 亮度调节
+    self.brightView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"brightness"]];
+    self.brightView.frame = CGRectMake(0, 0, self.brightView.image.size.width - 2, self.brightView.image.size.height - 2);
+    self.brightView.hidden = YES;
+    self.brightView.center = CGPointMake(KSCREEN_WIDTH / 2, 100);
+    [self.view addSubview:self.brightView];
+    
+    // 快进
+    self.ratImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 10)];
+    self.ratImageView.center = self.brightView.center = CGPointMake(KSCREEN_WIDTH / 2, 100);
+    self.ratImageView.hidden = YES;
+    [self.view addSubview:self.ratImageView];
     
 }
 
 #pragma mark -  添加进度观察 - addProgressObserver
 - (void)addProgressObserver {
+    
+    __weak __block XNPlayerViewController* weakself = self;
+    
     //      设置每秒执行一次
     [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue: NULL usingBlock:^(CMTime time) {
         //        NSLog(@"进度观察 + %f", self.playProgress.value);
         //  获取当前时间
-        CMTime currentTime = self.player.currentItem.currentTime;
-        //  转化成秒数
-        CGFloat currentPlayTime = (CGFloat)currentTime.value / currentTime.timescale;
+        CMTime currentTime = weakself.player.currentItem.currentTime;
         //  总时间
-        CMTime totalTime = self.playItem.duration;
+        CMTime totalTime = weakself.playItem.duration;
         //  转化成秒
-        //        _totalMovieDuration = (CGFloat)totalTime.value / totalTime.timescale;
-        //        //  相减后
-        //        self.playProgress.value = CMTimeGetSeconds(currentTime) / _totalMovieDuration;
-        //        self.progressSlider = CMTimeGetSeconds(currentTime) / _totalMovieDuration;
-        //                NSLog(@"%f", _topProgressSlider.value);
-        //        NSDate *pastDate = [NSDate dateWithTimeIntervalSince1970: currentPlayTime];
-        ////        self.playTime.text = [self getTimeByDate:pastDate byProgress: currentPlayTime];
-        //        if (self.isFirstTap) {
-        //            [self setTopRightBottomViewShowToHidden];
-        //        } else {
-        //            [self setTopRightBottomViewHiddenToShow];
-        //        }
+        weakself.rate.maximumValue = (CGFloat)totalTime.value / totalTime.timescale;
+        //  相减后
+//        self.rate.value =  -(currentPlayTime - self.rate.maximumValue);
+        weakself.rate.value = CMTimeGetSeconds(currentTime);
+        if (weakself.isFirstClick) {
+//            [self setTopRightBottomViewShowToHidden];
+        } else {
+//            [self setTopRightBottomViewHiddenToShow];
+        }
     }];
-    //      设置topProgressSlider图片
-    UIImage *thumbImage = [UIImage imageNamed:@"slider-metal-handle.png"];
-    //    [self.playProgress setThumbImage:thumbImage forState:UIControlStateHighlighted];
-    //    [self.playProgress setThumbImage:thumbImage forState:UIControlStateNormal];
+
 }
 
 
@@ -353,6 +395,10 @@ typedef NS_ENUM(NSUInteger, Direction) {
         
         self.volumeViewSlider.center = CGPointMake(KSCREEN_WIDTH / 2, KSCREENH_HEIGHT / 2);
         
+        self.brightView.center = CGPointMake(KSCREEN_WIDTH / 2, KSCREENH_HEIGHT / 2);
+        
+        self.ratImageView.center = CGPointMake(KSCREEN_WIDTH / 2, KSCREENH_HEIGHT / 2);
+        
         NSLog(@"KSCREENH_HEIGHT  =  %f KSCREEN_WIDTH = %f",KSCREENH_HEIGHT,KSCREEN_WIDTH);
     }
     if (orientation == UIInterfaceOrientationLandscapeLeft) {
@@ -360,6 +406,9 @@ typedef NS_ENUM(NSUInteger, Direction) {
         self.playerLayer.frame = CGRectMake(0, 0, KSCREEN_WIDTH, KSCREENH_HEIGHT);
         
         self.volumeViewSlider.center = CGPointMake(KSCREEN_WIDTH / 2, KSCREENH_HEIGHT / 2);
+        
+        self.brightView.center = CGPointMake(KSCREEN_WIDTH / 2, KSCREENH_HEIGHT / 2);
+        self.ratImageView.center = CGPointMake(KSCREEN_WIDTH / 2, KSCREENH_HEIGHT / 2);
         
         self.bottomSpace.constant = 0;
         
@@ -373,6 +422,8 @@ typedef NS_ENUM(NSUInteger, Direction) {
         self.bottomSpace.constant =  KSCREENH_HEIGHT - 200;
         
         self.volumeViewSlider.center = CGPointMake(KSCREEN_WIDTH / 2,100);
+        self.brightView.center = CGPointMake(KSCREEN_WIDTH / 2,100);;
+        self.ratImageView.center = CGPointMake(KSCREEN_WIDTH / 2,100);;
         
     }
 }
@@ -382,23 +433,7 @@ typedef NS_ENUM(NSUInteger, Direction) {
  */
 - (void)reConfiger{
     
-    //    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    //    if (orientation == UIInterfaceOrientationLandscapeRight) {
-    ////        [self setPlayerLayerFrame];
-    //        //        self.isFirstRotatorTap = YES;
-    ////        [self setTopRightBottomFrame];
-    //    }
-    //    if (orientation == UIInterfaceOrientationLandscapeLeft) {
-    ////        [self setPlayerLayerFrame];
-    ////
-    ////        [self setTopRightBottomFrame];
-    //    }
-    //    if (orientation == UIInterfaceOrientationPortrait) {
-    //        //  竖屏的时候
-    ////        [self setVerticalFrame];
-    ////        //        self.isFirstRotatorTap = YES;
-    ////        [self setTopRightBottomFrame];
-    //    }
+  
 }
 
 - (void)bottmRight{
