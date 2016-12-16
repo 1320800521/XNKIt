@@ -1,13 +1,12 @@
 //
-//  XNConViewController.m
+//  XNViewController.m
 //  XNKit
 //
-//  Created by 小鸟 on 16/11/1.
+//  Created by 小鸟 on 2016/12/12.
 //  Copyright © 2016年 小鸟. All rights reserved.
 //
 
 #import "XNViewController.h"
-//#import "mj"
 
 @interface XNViewController ()
 
@@ -15,7 +14,15 @@
 
 @implementation XNViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
 #pragma mark - Navigation
