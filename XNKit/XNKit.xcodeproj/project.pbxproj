@@ -29,6 +29,8 @@
 		8B66B6D31DDD9C3100033591 /* XNAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B66B6D21DDD9C3100033591 /* XNAlbumViewController.m */; };
 		8B6C96561DFEAEE7001335DF /* XNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6C96551DFEAEE7001335DF /* XNViewController.m */; };
 		8B703A631DCB18E200ECB221 /* 000.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B703A621DCB18E200ECB221 /* 000.png */; };
+		8B8073031E0BCFD90057ADF5 /* ExSelectItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8073021E0BCFD90057ADF5 /* ExSelectItemsView.m */; };
+		8B8073061E0BCFFA0057ADF5 /* flowBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8073051E0BCFFA0057ADF5 /* flowBtn.m */; };
 		8B910A341DCB3B1900C45A30 /* UITextField+XNTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B910A331DCB3B1900C45A30 /* UITextField+XNTextField.m */; };
 		8B910A371DCB3CB800C45A30 /* UIActionSheet+XNActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B910A361DCB3CB800C45A30 /* UIActionSheet+XNActionSheet.m */; };
 		8B910A3C1DCB3E0200C45A30 /* UIBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B910A3A1DCB3E0200C45A30 /* UIBadgeView.m */; };
@@ -132,6 +134,10 @@
 		8B6C96541DFEAEE7001335DF /* XNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNViewController.h; sourceTree = "<group>"; };
 		8B6C96551DFEAEE7001335DF /* XNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNViewController.m; sourceTree = "<group>"; };
 		8B703A621DCB18E200ECB221 /* 000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 000.png; sourceTree = "<group>"; };
+		8B8073011E0BCFD90057ADF5 /* ExSelectItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExSelectItemsView.h; sourceTree = "<group>"; };
+		8B8073021E0BCFD90057ADF5 /* ExSelectItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExSelectItemsView.m; sourceTree = "<group>"; };
+		8B8073041E0BCFFA0057ADF5 /* flowBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flowBtn.h; sourceTree = "<group>"; };
+		8B8073051E0BCFFA0057ADF5 /* flowBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flowBtn.m; sourceTree = "<group>"; };
 		8B910A321DCB3B1900C45A30 /* UITextField+XNTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XNTextField.h"; sourceTree = "<group>"; };
 		8B910A331DCB3B1900C45A30 /* UITextField+XNTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XNTextField.m"; sourceTree = "<group>"; };
 		8B910A351DCB3CB800C45A30 /* UIActionSheet+XNActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+XNActionSheet.h"; sourceTree = "<group>"; };
@@ -395,6 +401,10 @@
 		8B910A3B1DCB3E0200C45A30 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				8B8073041E0BCFFA0057ADF5 /* flowBtn.h */,
+				8B8073051E0BCFFA0057ADF5 /* flowBtn.m */,
+				8B8073011E0BCFD90057ADF5 /* ExSelectItemsView.h */,
+				8B8073021E0BCFD90057ADF5 /* ExSelectItemsView.m */,
 				8B910A3D1DCB3E2300C45A30 /* XNTool.h */,
 				8B910A3E1DCB3E2300C45A30 /* XNTool.m */,
 				8BBC894A1DCC7B6C00459E7F /* XNAttributeText.h */,
@@ -706,6 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8073061E0BCFFA0057ADF5 /* flowBtn.m in Sources */,
 				8BBC89491DCC66EC00459E7F /* UIAlertView+XNBlock.m in Sources */,
 				8B9B4ED91DC9D288000648DB /* UIView+XNView.m in Sources */,
 				8B12F4341E0A86EB000288AA /* XNNetWork.m in Sources */,
@@ -729,6 +740,7 @@
 				8B991F361DE5334900069A2F /* XNPlayerViewController.m in Sources */,
 				8B910A341DCB3B1900C45A30 /* UITextField+XNTextField.m in Sources */,
 				8B4D84201DC743BD009A7A8E /* main.m in Sources */,
+				8B8073031E0BCFD90057ADF5 /* ExSelectItemsView.m in Sources */,
 				8B910A3F1DCB3E2300C45A30 /* XNTool.m in Sources */,
 				8B9B4ECA1DC991F8000648DB /* UILabel+XNLabel.m in Sources */,
 				8BF6815F1DDC0AEE00852B45 /* XNQRCodeViewController.m in Sources */,

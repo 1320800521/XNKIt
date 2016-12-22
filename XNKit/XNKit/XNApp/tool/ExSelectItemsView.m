@@ -177,7 +177,7 @@
         [cell addSubview:line];
     }
     cell.textLabel.text = self.list[indexPath.row][@"name"];
-    cell.textLabel.font = APP_FONT_14;
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
     int order = [self.list[indexPath.row][@"order"] intValue];
     int selectedOrder = [self.selectedInfo[[self.selectedBtn tag]][@"order"] intValue];
     if (order == selectedOrder) {
