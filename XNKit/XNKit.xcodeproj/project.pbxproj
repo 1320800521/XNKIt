@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8B075A191DD0418500459F2C /* testConViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B075A171DD0418500459F2C /* testConViewController.m */; };
 		8B075A1A1DD0418500459F2C /* testConViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B075A181DD0418500459F2C /* testConViewController.xib */; };
+		8B12F4341E0A86EB000288AA /* XNNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B12F4331E0A86EB000288AA /* XNNetWork.m */; };
+		8B12F4371E0A8925000288AA /* MBProgressHUD+XNHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B12F4361E0A8925000288AA /* MBProgressHUD+XNHub.m */; };
 		8B1516931DD46B0D00F37C40 /* XNQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1516921DD46B0D00F37C40 /* XNQRCode.m */; };
 		8B4D84201DC743BD009A7A8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D841F1DC743BD009A7A8E /* main.m */; };
 		8B4D84231DC743BD009A7A8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D84221DC743BD009A7A8E /* AppDelegate.m */; };
@@ -25,6 +27,7 @@
 		8B66B6CF1DDD9B5B00033591 /* user_added_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B66B6CB1DDD9B5B00033591 /* user_added_02@2x.png */; };
 		8B66B6D01DDD9B5B00033591 /* user_added_02@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B66B6CC1DDD9B5B00033591 /* user_added_02@3x.png */; };
 		8B66B6D31DDD9C3100033591 /* XNAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B66B6D21DDD9C3100033591 /* XNAlbumViewController.m */; };
+		8B6C96561DFEAEE7001335DF /* XNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6C96551DFEAEE7001335DF /* XNViewController.m */; };
 		8B703A631DCB18E200ECB221 /* 000.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B703A621DCB18E200ECB221 /* 000.png */; };
 		8B910A341DCB3B1900C45A30 /* UITextField+XNTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B910A331DCB3B1900C45A30 /* UITextField+XNTextField.m */; };
 		8B910A371DCB3CB800C45A30 /* UIActionSheet+XNActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B910A361DCB3CB800C45A30 /* UIActionSheet+XNActionSheet.m */; };
@@ -57,9 +60,6 @@
 		8B9B4ED61DC9C3CD000648DB /* UIColor+XNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4ED51DC9C3CD000648DB /* UIColor+XNColor.m */; };
 		8B9B4ED91DC9D288000648DB /* UIView+XNView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4ED81DC9D288000648DB /* UIView+XNView.m */; };
 		8B9B4EE01DC9D902000648DB /* NSString+XNString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4EDF1DC9D902000648DB /* NSString+XNString.m */; };
-		8B9B4EE61DC9EF65000648DB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4EE31DC9EF65000648DB /* MBProgressHUD.m */; };
-		8B9B4EE71DC9EF65000648DB /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4EE51DC9EF65000648DB /* ProgressHUD.m */; };
-		8B9B4EEA1DC9EF8F000648DB /* MBProgressHUD+XNHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4EE91DC9EF8F000648DB /* MBProgressHUD+XNHub.m */; };
 		8B9B4EED1DC9F7D4000648DB /* UIButton+XNButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9B4EEC1DC9F7D4000648DB /* UIButton+XNButton.m */; };
 		8B9CB2D71DEC269F00E85E8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9CB2D61DEC269F00E85E8C /* ViewController.m */; };
 		8BB7A3821DE8117A00D7E353 /* XNTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB7A3811DE8117A00D7E353 /* XNTouchButton.m */; };
@@ -72,10 +72,9 @@
 		8BC5813E1DED5DB20026A66C /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8BC5813D1DED5DB20026A66C /* 1.mp4 */; };
 		8BC5814D1DED85990026A66C /* XNBlueToothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC5814B1DED85990026A66C /* XNBlueToothViewController.m */; };
 		8BC5814E1DED85990026A66C /* XNBlueToothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC5814C1DED85990026A66C /* XNBlueToothViewController.xib */; };
-		8BE6469E1DC8997B0069B61A /* XNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE6469D1DC8997B0069B61A /* XNViewController.m */; };
-		8BED6C0C1DEFD48100E50D55 /* XNNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED6C0B1DEFD48100E50D55 /* XNNetWork.m */; };
 		8BF6815F1DDC0AEE00852B45 /* XNQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6815E1DDC0AEE00852B45 /* XNQRCodeViewController.m */; };
 		8BF681621DDC433400852B45 /* bg_scanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BF681611DDC433400852B45 /* bg_scanner@2x.png */; };
+		B08F77C8580B7BE00E4C9D0F /* libPods-XNKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE71E47DDD854244958E185 /* libPods-XNKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,9 +95,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FB90E29CF0C69FB9ECEA5C3 /* Pods-XNKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XNKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-XNKit/Pods-XNKit.release.xcconfig"; sourceTree = "<group>"; };
 		8B075A161DD0418500459F2C /* testConViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testConViewController.h; sourceTree = "<group>"; };
 		8B075A171DD0418500459F2C /* testConViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testConViewController.m; sourceTree = "<group>"; };
 		8B075A181DD0418500459F2C /* testConViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testConViewController.xib; sourceTree = "<group>"; };
+		8B12F4331E0A86EB000288AA /* XNNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNNetWork.m; sourceTree = "<group>"; };
+		8B12F4351E0A8925000288AA /* MBProgressHUD+XNHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XNHub.h"; sourceTree = "<group>"; };
+		8B12F4361E0A8925000288AA /* MBProgressHUD+XNHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XNHub.m"; sourceTree = "<group>"; };
 		8B1516911DD46B0D00F37C40 /* XNQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNQRCode.h; sourceTree = "<group>"; };
 		8B1516921DD46B0D00F37C40 /* XNQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNQRCode.m; sourceTree = "<group>"; };
 		8B4D841B1DC743BD009A7A8E /* XNKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XNKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +129,8 @@
 		8B66B6CC1DDD9B5B00033591 /* user_added_02@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_added_02@3x.png"; sourceTree = "<group>"; };
 		8B66B6D11DDD9C3100033591 /* XNAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNAlbumViewController.h; sourceTree = "<group>"; };
 		8B66B6D21DDD9C3100033591 /* XNAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNAlbumViewController.m; sourceTree = "<group>"; };
+		8B6C96541DFEAEE7001335DF /* XNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNViewController.h; sourceTree = "<group>"; };
+		8B6C96551DFEAEE7001335DF /* XNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNViewController.m; sourceTree = "<group>"; };
 		8B703A621DCB18E200ECB221 /* 000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 000.png; sourceTree = "<group>"; };
 		8B910A321DCB3B1900C45A30 /* UITextField+XNTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XNTextField.h"; sourceTree = "<group>"; };
 		8B910A331DCB3B1900C45A30 /* UITextField+XNTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XNTextField.m"; sourceTree = "<group>"; };
@@ -170,12 +175,6 @@
 		8B9B4ED81DC9D288000648DB /* UIView+XNView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XNView.m"; sourceTree = "<group>"; };
 		8B9B4EDE1DC9D902000648DB /* NSString+XNString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XNString.h"; sourceTree = "<group>"; };
 		8B9B4EDF1DC9D902000648DB /* NSString+XNString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XNString.m"; sourceTree = "<group>"; };
-		8B9B4EE21DC9EF65000648DB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		8B9B4EE31DC9EF65000648DB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		8B9B4EE41DC9EF65000648DB /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
-		8B9B4EE51DC9EF65000648DB /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
-		8B9B4EE81DC9EF8F000648DB /* MBProgressHUD+XNHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XNHub.h"; sourceTree = "<group>"; };
-		8B9B4EE91DC9EF8F000648DB /* MBProgressHUD+XNHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XNHub.m"; sourceTree = "<group>"; };
 		8B9B4EEB1DC9F7D4000648DB /* UIButton+XNButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XNButton.h"; sourceTree = "<group>"; };
 		8B9B4EEC1DC9F7D4000648DB /* UIButton+XNButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XNButton.m"; sourceTree = "<group>"; };
 		8B9CB2D51DEC269F00E85E8C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -195,13 +194,12 @@
 		8BC5814A1DED85990026A66C /* XNBlueToothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNBlueToothViewController.h; sourceTree = "<group>"; };
 		8BC5814B1DED85990026A66C /* XNBlueToothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNBlueToothViewController.m; sourceTree = "<group>"; };
 		8BC5814C1DED85990026A66C /* XNBlueToothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XNBlueToothViewController.xib; sourceTree = "<group>"; };
-		8BE6469C1DC8997B0069B61A /* XNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNViewController.h; sourceTree = "<group>"; };
-		8BE6469D1DC8997B0069B61A /* XNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNViewController.m; sourceTree = "<group>"; };
 		8BED6C0A1DEFD48100E50D55 /* XNNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNNetWork.h; sourceTree = "<group>"; };
-		8BED6C0B1DEFD48100E50D55 /* XNNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNNetWork.m; sourceTree = "<group>"; };
 		8BF6815D1DDC0AEE00852B45 /* XNQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNQRCodeViewController.h; sourceTree = "<group>"; };
 		8BF6815E1DDC0AEE00852B45 /* XNQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNQRCodeViewController.m; sourceTree = "<group>"; };
 		8BF681611DDC433400852B45 /* bg_scanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_scanner@2x.png"; sourceTree = "<group>"; };
+		8EE71E47DDD854244958E185 /* libPods-XNKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XNKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCDAD9C24A7C538DA6B72354 /* Pods-XNKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XNKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XNKit/Pods-XNKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08F77C8580B7BE00E4C9D0F /* libPods-XNKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +228,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A4C1CD1922BD9A7C08C1EF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCDAD9C24A7C538DA6B72354 /* Pods-XNKit.debug.xcconfig */,
+				3FB90E29CF0C69FB9ECEA5C3 /* Pods-XNKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8B3B23C61DDEE6F50012DD5C /* plaayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +257,8 @@
 				8B4D84371DC743BD009A7A8E /* XNKitTests */,
 				8B4D84421DC743BD009A7A8E /* XNKitUITests */,
 				8B4D841C1DC743BD009A7A8E /* Products */,
+				4A4C1CD1922BD9A7C08C1EF7 /* Pods */,
+				92225FBE981B8C2529C6AB1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,7 +330,6 @@
 				8B66B6C31DDD93F200033591 /* photoAlbum */,
 				8B910A381DCB3E0200C45A30 /* commonView */,
 				8B910A3B1DCB3E0200C45A30 /* tool */,
-				8B9B4EE11DC9EF65000648DB /* ProgressHUD */,
 				8BE6469B1DC8987F0069B61A /* controller */,
 				8B4D84521DC75109009A7A8E /* Category */,
 			);
@@ -344,8 +353,8 @@
 				8B9B4ED81DC9D288000648DB /* UIView+XNView.m */,
 				8B9B4EDE1DC9D902000648DB /* NSString+XNString.h */,
 				8B9B4EDF1DC9D902000648DB /* NSString+XNString.m */,
-				8B9B4EE81DC9EF8F000648DB /* MBProgressHUD+XNHub.h */,
-				8B9B4EE91DC9EF8F000648DB /* MBProgressHUD+XNHub.m */,
+				8B12F4351E0A8925000288AA /* MBProgressHUD+XNHub.h */,
+				8B12F4361E0A8925000288AA /* MBProgressHUD+XNHub.m */,
 				8B9B4EEB1DC9F7D4000648DB /* UIButton+XNButton.h */,
 				8B9B4EEC1DC9F7D4000648DB /* UIButton+XNButton.m */,
 				8B910A321DCB3B1900C45A30 /* UITextField+XNTextField.h */,
@@ -422,17 +431,6 @@
 			path = image;
 			sourceTree = "<group>";
 		};
-		8B9B4EE11DC9EF65000648DB /* ProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				8B9B4EE21DC9EF65000648DB /* MBProgressHUD.h */,
-				8B9B4EE31DC9EF65000648DB /* MBProgressHUD.m */,
-				8B9B4EE41DC9EF65000648DB /* ProgressHUD.h */,
-				8B9B4EE51DC9EF65000648DB /* ProgressHUD.m */,
-			);
-			path = ProgressHUD;
-			sourceTree = "<group>";
-		};
 		8BC581371DED21730026A66C /* launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,10 +458,10 @@
 				8BF681611DDC433400852B45 /* bg_scanner@2x.png */,
 				8BC141741DD9BC480016A949 /* qrcode_scanline_barcode@2x.png */,
 				8BC141751DD9BC480016A949 /* qrcode_scanline_barcode@3x.png */,
-				8BE6469C1DC8997B0069B61A /* XNViewController.h */,
-				8BE6469D1DC8997B0069B61A /* XNViewController.m */,
 				8BF6815D1DDC0AEE00852B45 /* XNQRCodeViewController.h */,
 				8BF6815E1DDC0AEE00852B45 /* XNQRCodeViewController.m */,
+				8B6C96541DFEAEE7001335DF /* XNViewController.h */,
+				8B6C96551DFEAEE7001335DF /* XNViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -472,9 +470,17 @@
 			isa = PBXGroup;
 			children = (
 				8BED6C0A1DEFD48100E50D55 /* XNNetWork.h */,
-				8BED6C0B1DEFD48100E50D55 /* XNNetWork.m */,
+				8B12F4331E0A86EB000288AA /* XNNetWork.m */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		92225FBE981B8C2529C6AB1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EE71E47DDD854244958E185 /* libPods-XNKit.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,9 +490,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B4D84481DC743BD009A7A8E /* Build configuration list for PBXNativeTarget "XNKit" */;
 			buildPhases = (
+				857BC75F5FEC7FFF5B100CCA /* [CP] Check Pods Manifest.lock */,
 				8B4D84171DC743BD009A7A8E /* Sources */,
 				8B4D84181DC743BD009A7A8E /* Frameworks */,
 				8B4D84191DC743BD009A7A8E /* Resources */,
+				4EA36E9FD9B739C886B036F1 /* [CP] Embed Pods Frameworks */,
+				646808EA9F6F3AE5621A3709 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -644,19 +653,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4EA36E9FD9B739C886B036F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XNKit/Pods-XNKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		646808EA9F6F3AE5621A3709 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XNKit/Pods-XNKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		857BC75F5FEC7FFF5B100CCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8B4D84171DC743BD009A7A8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BE6469E1DC8997B0069B61A /* XNViewController.m in Sources */,
 				8BBC89491DCC66EC00459E7F /* UIAlertView+XNBlock.m in Sources */,
 				8B9B4ED91DC9D288000648DB /* UIView+XNView.m in Sources */,
-				8BED6C0C1DEFD48100E50D55 /* XNNetWork.m in Sources */,
+				8B12F4341E0A86EB000288AA /* XNNetWork.m in Sources */,
 				8B1516931DD46B0D00F37C40 /* XNQRCode.m in Sources */,
-				8B9B4EEA1DC9EF8F000648DB /* MBProgressHUD+XNHub.m in Sources */,
 				8B9B4ECD1DC99903000648DB /* UIImage+XNImage.m in Sources */,
 				8B075A191DD0418500459F2C /* testConViewController.m in Sources */,
+				8B6C96561DFEAEE7001335DF /* XNViewController.m in Sources */,
 				8B66B6C71DDD952300033591 /* XNPhotoCollectionViewCell.m in Sources */,
 				8B910A371DCB3CB800C45A30 /* UIActionSheet+XNActionSheet.m in Sources */,
 				8B9B4EED1DC9F7D4000648DB /* UIButton+XNButton.m in Sources */,
@@ -668,9 +724,7 @@
 				8B9B4EE01DC9D902000648DB /* NSString+XNString.m in Sources */,
 				8B4D84231DC743BD009A7A8E /* AppDelegate.m in Sources */,
 				8BC5813B1DED22080026A66C /* XNVideoLaunchViewController.m in Sources */,
-				8B9B4EE61DC9EF65000648DB /* MBProgressHUD.m in Sources */,
 				8BC5814D1DED85990026A66C /* XNBlueToothViewController.m in Sources */,
-				8B9B4EE71DC9EF65000648DB /* ProgressHUD.m in Sources */,
 				8BBC894C1DCC7B6C00459E7F /* XNAttributeText.m in Sources */,
 				8B991F361DE5334900069A2F /* XNPlayerViewController.m in Sources */,
 				8B910A341DCB3B1900C45A30 /* UITextField+XNTextField.m in Sources */,
@@ -679,6 +733,7 @@
 				8B9B4ECA1DC991F8000648DB /* UILabel+XNLabel.m in Sources */,
 				8BF6815F1DDC0AEE00852B45 /* XNQRCodeViewController.m in Sources */,
 				8B66B6D31DDD9C3100033591 /* XNAlbumViewController.m in Sources */,
+				8B12F4371E0A8925000288AA /* MBProgressHUD+XNHub.m in Sources */,
 				8B9B4ED31DC9BF3A000648DB /* UIImageView+XNImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -826,6 +881,7 @@
 		};
 		8B4D84491DC743BD009A7A8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCDAD9C24A7C538DA6B72354 /* Pods-XNKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 34G44GF43M;
@@ -839,6 +895,7 @@
 		};
 		8B4D844A1DC743BD009A7A8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FB90E29CF0C69FB9ECEA5C3 /* Pods-XNKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 34G44GF43M;

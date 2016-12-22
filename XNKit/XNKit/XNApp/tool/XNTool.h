@@ -11,13 +11,19 @@
 
 @interface XNTool : NSObject
 
-//GB2312转换为UTF8格式
+/**
+    GB2312转换为UTF8格式
+ */
 + (NSData *)convertGB2312toUTF8Data:(NSData *)gb2312Data;
 
-//NSData转NSString
+/**
+    NSData转NSString
+ */
 + (NSString *)convertDataToString:(NSData *)aData;
 
-//NSString转NSData
+/**
+ NSData转NSString
+ */
 + (NSData *)convertStringToData:(NSString *)aString;
 
 //获取当前时间

@@ -134,7 +134,7 @@
     //创建文本行间距
     CGFloat lineSpace = 4.2f;//间距数据
     CTParagraphStyleSetting lineSpaceStyle;
-    lineSpaceStyle.spec = kCTParagraphStyleSpecifierLineSpacing;//指定为行间距属性
+    lineSpaceStyle.spec = kCTParagraphStyleSpecifierLineBreakMode;//指定为行间距属性
     lineSpaceStyle.valueSize = sizeof(lineSpace);
     lineSpaceStyle.value = &lineSpace;
     //创建样式数组

@@ -8,6 +8,13 @@
 
 #import "XNNetWork.h"
 
+@interface XNNetWork ()<MBProgressHUDDelegate>
+/**
+ 加载菊花
+ */
+@property (nonatomic,strong) MBProgressHUD *hub;
+
+@end
 /**
     根URL
  */
@@ -16,6 +23,10 @@ static NSString *XN_BaseUrl = nil;
     请求头
  */
 static NSDictionary *XN_HttpHeader = nil;
+/**
+    公共参数
+ */
+static NSDictionary *XN_PublicParam = nil;
 /**
     请求任务数组
  */
@@ -31,7 +42,7 @@ static BOOL XN_BaseUrlChanged = YES;
 /**
     不对URL进行编码
  */
-static BOOL XN_Encode = NO;
+//static BOOL XN_Encode = NO;
 /**
     取消请求时操作
  */
@@ -39,7 +50,7 @@ static BOOL XN_CancelRequestShould = YES;
 /**
     是否缓存数据
  */
-static BOOL XN_Cache = YES;
+//static BOOL XN_Cache = YES;
 /**
     默认打印日志
  */
@@ -65,6 +76,8 @@ static XNResponseType XN_ResponseType = XNResponseTypeJSON;
     请求管理
  */
 static AFHTTPSessionManager *XN_HttpManager = nil;
+
+
 
 
 
@@ -243,6 +256,23 @@ static inline NSString *cachePath() {
     XN_BaseUrl = baseUrl;
 }
 
++ (void)configerBaseUrl:(XNBaseUrlType)type{
+
+}
+
+/**
+ 设置公共参数
+
+ @param param 公共参数
+ @return 公共参数
+ */
++ (NSDictionary *)configerPublicParam:(NSDictionary *)param{
+    
+    if (!XN_PublicParam && param) {
+        XN_PublicParam = [NSDictionary dictionaryWithDictionary:param];
+    }
+    return param;
+}
 
 #pragma mark 请求前提示
 /**
@@ -256,11 +286,12 @@ static inline NSString *cachePath() {
          params:(NSDictionary *)xn_params
         showHub:(BOOL)xn_showHub
    failureBlcok:(XNFail)xn_failBlock{
-   
-//    XNNetWork *network = [XNNetWork shareInstance];
     
     if (xn_showHub) {
-        [[XNNetWork shareInstance].hub showAnimated:YES];
+//        if (![XNNetWork shareInstance].hub) {
+            [XNNetWork shareInstance].hub = [ MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+//        }
+        [[[XNNetWork shareInstance] hub] showAnimated:YES];
     }
     // 处理拼接url
     NSString *absolute = [self absoluteUrlWithPath:xn_url];
@@ -313,6 +344,12 @@ static inline NSString *cachePath() {
                    successblock:(XNSuccess)xn_successBlock
                    failureBlcok:(XNFail)xn_failBlock{
     
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:xn_params];
+    [dict addEntriesFromDictionary:XN_PublicParam];
+    
+    xn_params = (NSDictionary *)dict;
+    
+    
     [self tipurl:xn_url params:xn_params showHub:xn_showHub failureBlcok:xn_failBlock];
     
     AFHTTPSessionManager *manager = [self manager];
@@ -340,14 +377,14 @@ static inline NSString *cachePath() {
                 }
                 
                 if (xn_showHub) {
-                    [[XNNetWork shareInstance].hub hide:YES afterDelay:3];
+                    [[XNNetWork shareInstance].hub hideAnimated:YES afterDelay:3];
                 }
                 xn_successBlock(response);
                 
                 return nil;
             }else{
                 if (xn_showHub) {
-                     [[XNNetWork shareInstance].hub hide:YES afterDelay:3];
+                     [[XNNetWork shareInstance].hub hideAnimated:YES afterDelay:3];
                 }
                 SHOW_ALERT(@"网络连接断开,请检查网络!");
                 xn_failBlock(nil);
@@ -388,7 +425,7 @@ static inline NSString *cachePath() {
                           [self tryToParseData:responseObject]);
                 }
                 if (xn_showHub) {
-                    [[XNNetWork shareInstance].hub hide:YES afterDelay:3];
+                    [[XNNetWork shareInstance].hub hideAnimated:YES afterDelay:3];
                 }
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -435,7 +472,7 @@ static inline NSString *cachePath() {
                           [self tryToParseData:responseObject]);
                 }
                 if (xn_showHub) {
-                    [[XNNetWork shareInstance].hub hide:YES afterDelay:3];
+                    [[XNNetWork shareInstance].hub hideAnimated:YES afterDelay:3];
                 }
                 
                 
@@ -671,7 +708,7 @@ static inline NSString *cachePath() {
     [self tryToParseData:responseObject];
     
     if (showHub) {
-        [[XNNetWork shareInstance].hub hide:YES afterDelay:3];
+        [[XNNetWork shareInstance].hub hideAnimated:YES afterDelay:3];
     }
     
     if (XN_Debug) {
@@ -897,9 +934,7 @@ static inline NSString *cachePath() {
             refreshCache:(BOOL)refreshCache
                  showHUD:(BOOL)showHUD{
     
-    NSDictionary *params = [NSMutableDictionary dictionaryWithDictionary:paramsDict];
-    
-    [XNNetWork initWithType:XNTypeGet url:url params:params refreshCache:refreshCache showHub:showHUD progress:progress successblock:successBlock failureBlcok:failureBlock];
+    [XNNetWork initWithType:XNTypeGet url:url params:paramsDict refreshCache:refreshCache showHub:showHUD progress:progress successblock:successBlock failureBlcok:failureBlock];
 }
 
 
@@ -922,8 +957,7 @@ static inline NSString *cachePath() {
               refreshCache:(BOOL)refreshCache
                    showHUD:(BOOL)showHUD{
 
-    NSDictionary *params = [NSMutableDictionary dictionaryWithDictionary:paramsDict];
-    [XNNetWork initWithType:XNTypePost url:url params:params refreshCache:refreshCache showHub:showHUD progress:progress successblock:successBlock failureBlcok:failureBlock];
+    [XNNetWork initWithType:XNTypePost url:url params:paramsDict refreshCache:refreshCache showHub:showHUD progress:progress successblock:successBlock failureBlcok:failureBlock];
 }
 
 
@@ -985,7 +1019,7 @@ static inline NSString *cachePath() {
             [self tryToParseData:responseObject];
             
             if (xn_showHub) {
-                [[XNNetWork shareInstance].hub hide:YES afterDelay:3];
+                [[XNNetWork shareInstance].hub hideAnimated:YES afterDelay:3];
             }
             
             if (XN_Debug) {
@@ -1110,7 +1144,7 @@ static inline NSString *cachePath() {
         if (xn_showHub) {
             
             
-            [[XNNetWork shareInstance].hub hide:YES afterDelay:3];
+            [[XNNetWork shareInstance].hub hideAnimated:YES afterDelay:3];
         }
         xn_Fail(nil);
         
@@ -1129,6 +1163,7 @@ static inline NSString *cachePath() {
     if (_hub == nil) {
         //x_hud = [[MBProgressHUD alloc] initWithView:[UIApplication sharedApplication].keyWindow];
         _hub = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+        _hub.hidden = NO;
         // 隐藏时候从父控件中移除
         _hub.removeFromSuperViewOnHide = YES;
         // YES代表需要蒙版效果

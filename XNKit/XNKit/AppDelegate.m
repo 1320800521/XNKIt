@@ -11,6 +11,7 @@
 #import "testConViewController.h"
 #import "XNPlayerViewController.h"
 #import "XNVideoLaunchViewController.h"
+#import "ViewController.h"
 //#import <>
 
 @interface AppDelegate ()
@@ -27,7 +28,7 @@
     //设置启动图时间
     [NSThread sleepForTimeInterval:1.0];
     
-    XNVideoLaunchViewController *root = [[XNVideoLaunchViewController alloc] init];
+    ViewController *root = [[ViewController alloc] init];
      UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:root];
     self.window.rootViewController = nav;
     

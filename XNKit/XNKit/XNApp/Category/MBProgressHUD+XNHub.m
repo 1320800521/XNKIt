@@ -57,7 +57,7 @@
 - (void)showMessageWithIcon:(UIImage *)iconImg message:(NSString *)msg hideDelay:(float)delay onHide:(void (^)())onHide
 {
     if (msg == nil){
-        [self hide:true];
+        [self hideAnimated:true];
         if (onHide){
             onHide();
         }
@@ -65,13 +65,13 @@
     }
     
     MBProgressHUD *hud = self;
-    hud.detailsLabelText = nil;
-    hud.labelText = nil;
+    hud.detailsLabel.text = nil;
+    hud.label.text = nil;
     hud.userInteractionEnabled = false;
     hud.mode = MBProgressHUDModeCustomView;
     hud.removeFromSuperViewOnHide = YES;
-    hud.dimBackground = NO;
-    hud.opacity = 0.7;
+//    hud.didMoveToWindow = NO;
+    hud.opaque = 0.7;
     
     UIView *customView = [[UIView alloc] init];
     UIImageView *iconView = [[UIImageView alloc] initWithImage:iconImg];
@@ -117,8 +117,8 @@
      */
     
     hud.customView = customView;
-    [hud show:true];
-    [hud hide:YES afterDelay:delay];
+    [hud showAnimated:YES];
+    [hud hideAnimated:YES afterDelay:delay];
     
     if (onHide){
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -141,18 +141,18 @@
     if (!hud){
         hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     }
-    hud.detailsLabelFont = [UIFont systemFontOfSize:16];
-    hud.detailsLabelText = msg;
+    hud.detailsLabel.font = [UIFont systemFontOfSize:16];
+    hud.detailsLabel.text = msg;
     
     // 再设置模式
     hud.mode = MBProgressHUDModeText;
     
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
-    hud.dimBackground = NO;
+//    hud.dimBackground = NO;
     // 2秒之后再消失
     int hideInterval = 3;
-    [hud hide:YES afterDelay:hideInterval];
+    [hud hideAnimated:YES afterDelay:hideInterval];
     
     if (onHide){
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(hideInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -177,8 +177,8 @@
     if (!hud) {
         hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     }
-    hud.detailsLabelText = msg;
-    hud.detailsLabelFont = [UIFont systemFontOfSize:16];
+    hud.detailsLabel.text = msg;
+    hud.detailsLabel.font = [UIFont systemFontOfSize:16];
     
     // 再设置模式
     hud.mode = MBProgressHUDModeIndeterminate;
@@ -199,7 +199,7 @@
 + (void)closeOnWindow
 {
     UIView *window = [(AppDelegate *)[UIApplication sharedApplication].delegate window];
-    [[MBProgressHUD HUDForView:window] hide:true];
+    [[MBProgressHUD HUDForView:window] hideAnimated:true];
 }
 
 //3秒之后快速提示框消失
@@ -216,18 +216,18 @@
     if (!hud){
         hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     }
-    hud.detailsLabelFont = [UIFont systemFontOfSize:16];
-    hud.detailsLabelText = msg;
+    hud.detailsLabel.font = [UIFont systemFontOfSize:16];
+    hud.detailsLabel.text = msg;
     
     // 再设置模式
     hud.mode = MBProgressHUDModeText;
     
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
-    hud.dimBackground = NO;
+//    hud.dimBackground = NO;
     // 2秒之后再消失
     int hideInterval = time;
-    [hud hide:YES afterDelay:hideInterval];
+    [hud hideAnimated:YES afterDelay:hideInterval];
     
     if (onHide){
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(hideInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

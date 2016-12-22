@@ -16,4 +16,19 @@
 #define KSCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
 #define KSCREENH_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+// md5 加密
+
+#define CC_MD5_DIGEST_LENGTH    16          /* digest length in bytes */
+#define CC_MD5_BLOCK_BYTES      64          /* block size in bytes */
+#define CC_MD5_BLOCK_LONG       (CC_MD5_BLOCK_BYTES / sizeof(CC_LONG))
+
+#ifdef DEBUG
+#define DTLog(s, ... ) NSLog( @"[%@ in line %d] ===============>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define DTLog(s, ... )
+#endif
+
+#define SHOW_ALERT(_msg_)  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:_msg_ delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];\
+[alert show];
+
 #endif /* PrefixHeader_pch */
