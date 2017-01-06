@@ -9,6 +9,7 @@
 
 #import "ViewController.h"
 #import "XNBlueToothViewController.h"
+#import "XNPlayerViewController.h"
 #import "XNNetWork.h"
 
 
@@ -124,6 +125,13 @@
         case 0:
         {
             XNBlueToothViewController *blueToothVC = [[XNBlueToothViewController alloc]init];
+            [self.navigationController pushViewController:blueToothVC animated:YES];
+            
+        }
+            break;
+        case 1:
+        {
+            XNPlayerViewController *blueToothVC = [[XNPlayerViewController alloc]init];
             [self.navigationController pushViewController:blueToothVC animated:YES];
             
         }

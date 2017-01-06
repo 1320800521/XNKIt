@@ -12,6 +12,7 @@
 		8B12F4341E0A86EB000288AA /* XNNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B12F4331E0A86EB000288AA /* XNNetWork.m */; };
 		8B12F4371E0A8925000288AA /* MBProgressHUD+XNHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B12F4361E0A8925000288AA /* MBProgressHUD+XNHub.m */; };
 		8B1516931DD46B0D00F37C40 /* XNQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1516921DD46B0D00F37C40 /* XNQRCode.m */; };
+		8B1D6EFE1E1CCC8B005D765C /* XNWaterFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D6EFD1E1CCC8B005D765C /* XNWaterFlowViewController.m */; };
 		8B4D84201DC743BD009A7A8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D841F1DC743BD009A7A8E /* main.m */; };
 		8B4D84231DC743BD009A7A8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D84221DC743BD009A7A8E /* AppDelegate.m */; };
 		8B4D84291DC743BD009A7A8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D84271DC743BD009A7A8E /* Main.storyboard */; };
@@ -96,6 +97,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8BAD978B1E1118FC006235BB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3FB90E29CF0C69FB9ECEA5C3 /* Pods-XNKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XNKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-XNKit/Pods-XNKit.release.xcconfig"; sourceTree = "<group>"; };
 		8B075A161DD0418500459F2C /* testConViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testConViewController.h; sourceTree = "<group>"; };
@@ -106,6 +120,8 @@
 		8B12F4361E0A8925000288AA /* MBProgressHUD+XNHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XNHub.m"; sourceTree = "<group>"; };
 		8B1516911DD46B0D00F37C40 /* XNQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNQRCode.h; sourceTree = "<group>"; };
 		8B1516921DD46B0D00F37C40 /* XNQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNQRCode.m; sourceTree = "<group>"; };
+		8B1D6EFC1E1CCC8B005D765C /* XNWaterFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNWaterFlowViewController.h; sourceTree = "<group>"; };
+		8B1D6EFD1E1CCC8B005D765C /* XNWaterFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNWaterFlowViewController.m; sourceTree = "<group>"; };
 		8B4D841B1DC743BD009A7A8E /* XNKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XNKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4D841F1DC743BD009A7A8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B4D84211DC743BD009A7A8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -185,6 +201,8 @@
 		8B9B4EEC1DC9F7D4000648DB /* UIButton+XNButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XNButton.m"; sourceTree = "<group>"; };
 		8B9CB2D51DEC269F00E85E8C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8B9CB2D61DEC269F00E85E8C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8BAD977B1E1118FB006235BB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8BAD978C1E111954006235BB /* XNKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XNKit.entitlements; sourceTree = "<group>"; };
 		8BB7A3801DE8117A00D7E353 /* XNTouchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XNTouchButton.h; path = image/XNTouchButton.h; sourceTree = "<group>"; };
 		8BB7A3811DE8117A00D7E353 /* XNTouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XNTouchButton.m; path = image/XNTouchButton.m; sourceTree = "<group>"; };
 		8BBC89471DCC66EC00459E7F /* UIAlertView+XNBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+XNBlock.h"; sourceTree = "<group>"; };
@@ -243,6 +261,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8B1D6EFB1E1CCBBA005D765C /* waterFlow */ = {
+			isa = PBXGroup;
+			children = (
+				8B1D6EFC1E1CCC8B005D765C /* XNWaterFlowViewController.h */,
+				8B1D6EFD1E1CCC8B005D765C /* XNWaterFlowViewController.m */,
+			);
+			path = waterFlow;
+			sourceTree = "<group>";
+		};
 		8B3B23C61DDEE6F50012DD5C /* plaayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +308,7 @@
 		8B4D841D1DC743BD009A7A8E /* XNKit */ = {
 			isa = PBXGroup;
 			children = (
+				8BAD978C1E111954006235BB /* XNKit.entitlements */,
 				8B4D84511DC74F72009A7A8E /* XNApp */,
 				8B4D84211DC743BD009A7A8E /* AppDelegate.h */,
 				8B4D84221DC743BD009A7A8E /* AppDelegate.m */,
@@ -328,6 +356,7 @@
 		8B4D84511DC74F72009A7A8E /* XNApp */ = {
 			isa = PBXGroup;
 			children = (
+				8B1D6EFB1E1CCBBA005D765C /* waterFlow */,
 				8BED6C091DEFD41000E50D55 /* network */,
 				8BC581441DED7FA70026A66C /* blueTooth */,
 				8BC581371DED21730026A66C /* launch */,
@@ -489,6 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				8EE71E47DDD854244958E185 /* libPods-XNKit.a */,
+				8BAD977B1E1118FB006235BB /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -506,6 +536,7 @@
 				8B4D84191DC743BD009A7A8E /* Resources */,
 				4EA36E9FD9B739C886B036F1 /* [CP] Embed Pods Frameworks */,
 				646808EA9F6F3AE5621A3709 /* [CP] Copy Pods Resources */,
+				8BAD978B1E1118FC006235BB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -563,9 +594,11 @@
 				TargetAttributes = {
 					8B4D841A1DC743BD009A7A8E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 34G44GF43M;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
 							com.apple.Push = {
 								enabled = 0;
 							};
@@ -738,6 +771,7 @@
 				8BC5814D1DED85990026A66C /* XNBlueToothViewController.m in Sources */,
 				8BBC894C1DCC7B6C00459E7F /* XNAttributeText.m in Sources */,
 				8B991F361DE5334900069A2F /* XNPlayerViewController.m in Sources */,
+				8B1D6EFE1E1CCC8B005D765C /* XNWaterFlowViewController.m in Sources */,
 				8B910A341DCB3B1900C45A30 /* UITextField+XNTextField.m in Sources */,
 				8B4D84201DC743BD009A7A8E /* main.m in Sources */,
 				8B8073031E0BCFD90057ADF5 /* ExSelectItemsView.m in Sources */,
@@ -896,11 +930,12 @@
 			baseConfigurationReference = FCDAD9C24A7C538DA6B72354 /* Pods-XNKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 34G44GF43M;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XNKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hah.XNKit;
+				PRODUCT_BUNDLE_IDENTIFIER = hah.test.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -910,11 +945,12 @@
 			baseConfigurationReference = 3FB90E29CF0C69FB9ECEA5C3 /* Pods-XNKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 34G44GF43M;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XNKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hah.XNKit;
+				PRODUCT_BUNDLE_IDENTIFIER = hah.test.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
