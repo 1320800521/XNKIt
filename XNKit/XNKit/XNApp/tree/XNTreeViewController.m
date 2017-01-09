@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  XNTreeViewController.m
 //  XNKit
 //
 //  Created by 小鸟 on 2017/1/9.
@@ -8,7 +8,11 @@
 
 #import "XNTreeViewController.h"
 
-@interface XNTreeViewController ()
+@interface XNTreeViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong) NSArray *array;
+
+@property (nonatomic,strong) UITableView *treeTableViewe;
 
 @end
 
@@ -17,6 +21,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSString *nodePath = [[NSBundle mainBundle] pathForResource:@"node" ofType:@"plist"];
+//    self.array = [[NSArray alloc] initWithContentsOfFile:nodePath];
+    self.array = [NSArray arrayWithContentsOfFile:nodePath];
+    
+    self.treeTableViewe = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [self.treeTableViewe registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    self.treeTableViewe.backgroundColor = [UIColor clearColor];
+    self.treeTableViewe.delegate = self;
+    self.treeTableViewe.dataSource = self;
+    [self.view addSubview:self.treeTableViewe];
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return [self.array count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    
+    
+    return cell;
+
 }
 
 - (void)didReceiveMemoryWarning {

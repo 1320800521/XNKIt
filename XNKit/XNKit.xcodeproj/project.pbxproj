@@ -75,6 +75,8 @@
 		8BC5813E1DED5DB20026A66C /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8BC5813D1DED5DB20026A66C /* 1.mp4 */; };
 		8BC5814D1DED85990026A66C /* XNBlueToothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC5814B1DED85990026A66C /* XNBlueToothViewController.m */; };
 		8BC5814E1DED85990026A66C /* XNBlueToothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC5814C1DED85990026A66C /* XNBlueToothViewController.xib */; };
+		8BEFFAC11E23A83B0059C541 /* node.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFFAC01E23A83B0059C541 /* node.plist */; };
+		8BEFFAC51E23A8850059C541 /* XNTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFFAC41E23A8850059C541 /* XNTreeViewController.m */; };
 		8BF6815F1DDC0AEE00852B45 /* XNQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6815E1DDC0AEE00852B45 /* XNQRCodeViewController.m */; };
 		8BF681621DDC433400852B45 /* bg_scanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BF681611DDC433400852B45 /* bg_scanner@2x.png */; };
 		B08F77C8580B7BE00E4C9D0F /* libPods-XNKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE71E47DDD854244958E185 /* libPods-XNKit.a */; };
@@ -202,7 +204,6 @@
 		8B9CB2D51DEC269F00E85E8C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8B9CB2D61DEC269F00E85E8C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8BAD977B1E1118FB006235BB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		8BAD978C1E111954006235BB /* XNKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XNKit.entitlements; sourceTree = "<group>"; };
 		8BB7A3801DE8117A00D7E353 /* XNTouchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XNTouchButton.h; path = image/XNTouchButton.h; sourceTree = "<group>"; };
 		8BB7A3811DE8117A00D7E353 /* XNTouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XNTouchButton.m; path = image/XNTouchButton.m; sourceTree = "<group>"; };
 		8BBC89471DCC66EC00459E7F /* UIAlertView+XNBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+XNBlock.h"; sourceTree = "<group>"; };
@@ -219,6 +220,9 @@
 		8BC5814B1DED85990026A66C /* XNBlueToothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNBlueToothViewController.m; sourceTree = "<group>"; };
 		8BC5814C1DED85990026A66C /* XNBlueToothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XNBlueToothViewController.xib; sourceTree = "<group>"; };
 		8BED6C0A1DEFD48100E50D55 /* XNNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNNetWork.h; sourceTree = "<group>"; };
+		8BEFFAC01E23A83B0059C541 /* node.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = node.plist; sourceTree = "<group>"; };
+		8BEFFAC31E23A8850059C541 /* XNTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNTreeViewController.h; sourceTree = "<group>"; };
+		8BEFFAC41E23A8850059C541 /* XNTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNTreeViewController.m; sourceTree = "<group>"; };
 		8BF6815D1DDC0AEE00852B45 /* XNQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNQRCodeViewController.h; sourceTree = "<group>"; };
 		8BF6815E1DDC0AEE00852B45 /* XNQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNQRCodeViewController.m; sourceTree = "<group>"; };
 		8BF681611DDC433400852B45 /* bg_scanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_scanner@2x.png"; sourceTree = "<group>"; };
@@ -308,7 +312,6 @@
 		8B4D841D1DC743BD009A7A8E /* XNKit */ = {
 			isa = PBXGroup;
 			children = (
-				8BAD978C1E111954006235BB /* XNKit.entitlements */,
 				8B4D84511DC74F72009A7A8E /* XNApp */,
 				8B4D84211DC743BD009A7A8E /* AppDelegate.h */,
 				8B4D84221DC743BD009A7A8E /* AppDelegate.m */,
@@ -322,6 +325,7 @@
 				8B4D842A1DC743BD009A7A8E /* Assets.xcassets */,
 				8B4D842C1DC743BD009A7A8E /* LaunchScreen.storyboard */,
 				8B4D842F1DC743BD009A7A8E /* Info.plist */,
+				8BEFFAC01E23A83B0059C541 /* node.plist */,
 				8B4D841E1DC743BD009A7A8E /* Supporting Files */,
 			);
 			path = XNKit;
@@ -356,6 +360,7 @@
 		8B4D84511DC74F72009A7A8E /* XNApp */ = {
 			isa = PBXGroup;
 			children = (
+				8BEFFAC21E23A8710059C541 /* tree */,
 				8B1D6EFB1E1CCBBA005D765C /* waterFlow */,
 				8BED6C091DEFD41000E50D55 /* network */,
 				8BC581441DED7FA70026A66C /* blueTooth */,
@@ -514,6 +519,15 @@
 			path = network;
 			sourceTree = "<group>";
 		};
+		8BEFFAC21E23A8710059C541 /* tree */ = {
+			isa = PBXGroup;
+			children = (
+				8BEFFAC31E23A8850059C541 /* XNTreeViewController.h */,
+				8BEFFAC41E23A8850059C541 /* XNTreeViewController.m */,
+			);
+			path = tree;
+			sourceTree = "<group>";
+		};
 		92225FBE981B8C2529C6AB1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +608,7 @@
 				TargetAttributes = {
 					8B4D841A1DC743BD009A7A8E = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 34G44GF43M;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -660,6 +675,7 @@
 				8B66B6CE1DDD9B5B00033591 /* user_added_01@3x.png in Resources */,
 				8BC5814E1DED85990026A66C /* XNBlueToothViewController.xib in Resources */,
 				8B991F6D1DE537D900069A2F /* volume@2x.png in Resources */,
+				8BEFFAC11E23A83B0059C541 /* node.plist in Resources */,
 				8B703A631DCB18E200ECB221 /* 000.png in Resources */,
 				8B991F691DE537D900069A2F /* rewind@2x.png in Resources */,
 				8B991F781DE58C7E00069A2F /* player@2x.png in Resources */,
@@ -776,6 +792,7 @@
 				8B4D84201DC743BD009A7A8E /* main.m in Sources */,
 				8B8073031E0BCFD90057ADF5 /* ExSelectItemsView.m in Sources */,
 				8B910A3F1DCB3E2300C45A30 /* XNTool.m in Sources */,
+				8BEFFAC51E23A8850059C541 /* XNTreeViewController.m in Sources */,
 				8B9B4ECA1DC991F8000648DB /* UILabel+XNLabel.m in Sources */,
 				8BF6815F1DDC0AEE00852B45 /* XNQRCodeViewController.m in Sources */,
 				8B66B6D31DDD9C3100033591 /* XNAlbumViewController.m in Sources */,
@@ -931,11 +948,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 34G44GF43M;
 				INFOPLIST_FILE = XNKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hah.test.com;
+				PRODUCT_BUNDLE_IDENTIFIER = xnkit.test.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -946,11 +963,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 34G44GF43M;
 				INFOPLIST_FILE = XNKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hah.test.com;
+				PRODUCT_BUNDLE_IDENTIFIER = xnkit.test.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
