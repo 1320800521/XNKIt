@@ -33,6 +33,9 @@
     self.treeTableViewe.dataSource = self;
     [self.view addSubview:self.treeTableViewe];
     
+    
+    
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -44,10 +47,18 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    
-    
+    cell.textLabel.text = self.array[indexPath.row][@"name"];
     return cell;
+}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if ([self.array[indexPath.row][@"node"] count] > 0) {
+        
+        NSArray *arr = @[tableView.indexPathForSelectedRow];
+        
+        [self.treeTableViewe insertRowsAtIndexPaths:arr withRowAnimation:UITableViewRowAnimationRight];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

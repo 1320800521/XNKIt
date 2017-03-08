@@ -11,6 +11,10 @@
 #import "XNBlueToothViewController.h"
 #import "XNPlayerViewController.h"
 #import "XNNetWork.h"
+#import "XNTreeViewController.h"
+#import "XNRunTestViewController.h"
+
+#import <UserNotifications/UserNotifications.h>
 
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -31,7 +35,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.array = [NSArray arrayWithObjects:@"视频启动图", @"视频播放器",@"蓝牙",nil];
+    self.array = [NSArray arrayWithObjects:@"视频启动图", @"视频播放器",@"蓝牙",@"树形结构",@"运行时",nil];
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
@@ -53,35 +57,16 @@
     
 //    [XNNetWork absoluteUrlWithPath:<#(NSString *)#>];
 
-    [self test];
+//    [self test];
 }
 
 - (void)test{
-    
-    
-//    NSDictionary *dict = {
-//        appId = "RYJ-MOBILE-IOS";
-//        appKey = 32c3704dc4e74bde85a8fb462d5e1bc2;
-//        appVersion = "2.2.0";
-//        build = 1601061200;
-//        channel = AppStore;
-//        deviceId = "CBFE3302-DAB3-4D8B-8629-DB959245A064";
-//        deviceName = "x86_64";
-//        mobile = 18900129097;
-//        os = ios;
-//        password = e10adc3949ba59abbe56e057f20f883e;
-//        productId = "com.rongyiju.platform";
-//        version = "1.0";
-//    }
-    
+
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"18900129097",@"mobile", nil];
-    
     
     [XNNetWork postReqeustWithURL:@"/api/member/login" params:dict successBlock:^(id json) {
         
         NSLog(@"%@  %@",json,json[@"msg"]);
-        
-        
         
     } failureBlock:^(NSError *error) {
         
@@ -93,7 +78,6 @@
 
 - (void)test1{
     
-//     DTLog(@"[GDHNetworkObject baseCache] ========%@===========",[XNNetWork baseCach]);
      NSString * path = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/xntest.zip"]];//
     [XNNetWork downloadWithUrl:@"https://codeload.github.com/gdhGaoFei/GDHNetwork/zip/master" savePath:path showHub:YES progress:^(int64_t bytessRead, int64_t totalBytesRead, int64_t totalBytesToRead) {
         
@@ -135,6 +119,21 @@
             [self.navigationController pushViewController:blueToothVC animated:YES];
             
         }
+            break;
+        case 3:
+        {
+            XNTreeViewController *treeVC = [[XNTreeViewController alloc]init];
+            [self.navigationController pushViewController:treeVC animated:YES];
+            
+        }
+        case 4:
+        {
+            XNRunTestViewController *runVC = [[XNRunTestViewController alloc]init];
+            runVC.title = self.array[indexPath.row];
+            [self.navigationController pushViewController:runVC animated:YES];
+            
+        }
+            
             break;
             
         default:
