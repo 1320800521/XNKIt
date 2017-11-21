@@ -8,6 +8,7 @@
 
 #import "XNQRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "XNQRCode.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScanWidth 200
@@ -58,8 +59,8 @@
     [self.view addSubview:btn];
     
     // 3.开始扫描二维码
-    [self initSubviews];
-    [self buildCamera];
+//    [self initSubviews];
+//    [self buildCamera];
     
 }
 
@@ -68,26 +69,34 @@
 - (void)turnTorchOn:(UIButton *)btn
 {
     
-    btn.selected = !btn.selected;
+//    btn.selected = !btn.selected;
+//    
+//    Class captureDeviceClass = NSClassFromString(@"AVCaptureDevice");
+//    if (captureDeviceClass != nil) {
+//        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+//        
+//        if ([device hasTorch] && [device hasFlash]){
+//            
+//            [device lockForConfiguration:nil];
+//            if (btn.selected) {
+//                [device setTorchMode:AVCaptureTorchModeOn];
+//                [device setFlashMode:AVCaptureFlashModeOn];
+//                
+//            } else {
+//                [device setTorchMode:AVCaptureTorchModeOff];
+//                [device setFlashMode:AVCaptureFlashModeOff];
+//            }
+//            [device unlockForConfiguration];
+//        }
+//    }
     
-    Class captureDeviceClass = NSClassFromString(@"AVCaptureDevice");
-    if (captureDeviceClass != nil) {
-        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-        
-        if ([device hasTorch] && [device hasFlash]){
-            
-            [device lockForConfiguration:nil];
-            if (btn.selected) {
-                [device setTorchMode:AVCaptureTorchModeOn];
-                [device setFlashMode:AVCaptureFlashModeOn];
-                
-            } else {
-                [device setTorchMode:AVCaptureTorchModeOff];
-                [device setFlashMode:AVCaptureFlashModeOff];
-            }
-            [device unlockForConfiguration];
-        }
-    }
+    UIImage *image = [[XNQRCode alloc] QRLogoUrl:@"http://www.93w.net/yulu/2015/0611/19833.html" QRCodeMessage:@"111111.jpeg"];
+    
+    UIImageView *imagv = [[UIImageView alloc]initWithImage:image];
+    
+    imagv.frame = CGRectMake(100, 200, 300,300);
+    imagv.center = self.view.center;
+    [self.view addSubview:imagv];
 }
 
 
@@ -261,7 +270,7 @@
     _line.hidden = YES;
     [_timer invalidate];
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"扫码成功" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:stringValue preferredStyle:UIAlertControllerStyleAlert];
     [self performSelector:@selector(dismiss) withObject:nil afterDelay:2.0];
     [self presentViewController:alert animated:YES completion:nil];
 }

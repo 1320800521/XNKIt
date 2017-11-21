@@ -10,9 +10,11 @@
 #import "ViewController.h"
 #import "XNBlueToothViewController.h"
 #import "XNPlayerViewController.h"
+#import "XNVideoLaunchViewController.h"
 #import "XNNetWork.h"
 #import "XNTreeViewController.h"
 #import "XNRunTestViewController.h"
+#import "XNQRCodeViewController.h"
 
 #import <UserNotifications/UserNotifications.h>
 
@@ -35,7 +37,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.array = [NSArray arrayWithObjects:@"视频启动图", @"视频播放器",@"蓝牙",@"树形结构",@"运行时",nil];
+    self.array = [NSArray arrayWithObjects:@"视频启动图", @"视频播放器",@"蓝牙",@"树形结构",@"运行时",@"二维码扫描和生成",nil];
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.dataSource = self;
@@ -115,7 +117,7 @@
             break;
         case 1:
         {
-            XNPlayerViewController *blueToothVC = [[XNPlayerViewController alloc]init];
+            XNVideoLaunchViewController *blueToothVC = [[XNVideoLaunchViewController alloc]init];
             [self.navigationController pushViewController:blueToothVC animated:YES];
             
         }
@@ -126,6 +128,7 @@
             [self.navigationController pushViewController:treeVC animated:YES];
             
         }
+            break;
         case 4:
         {
             XNRunTestViewController *runVC = [[XNRunTestViewController alloc]init];
@@ -133,9 +136,13 @@
             [self.navigationController pushViewController:runVC animated:YES];
             
         }
-            
             break;
-            
+        case 5:{
+            XNQRCodeViewController *runVC = [[XNQRCodeViewController alloc]init];
+            runVC.title = self.array[indexPath.row];
+            [self.navigationController pushViewController:runVC animated:YES];
+        }
+            break;
         default:
             break;
     }

@@ -60,7 +60,7 @@
         logoImage = [UIImage imageWithData:imageData];
     }
     
-    CGFloat logoImageW = 100;
+    CGFloat logoImageW = 120;
     CGFloat logoImageH = logoImageW;
     CGFloat logoImageX = (image1.size.width - logoImageW) * 0.5;
     CGFloat logoImageY = (image1.size.height - logoImageH) * 0.5;

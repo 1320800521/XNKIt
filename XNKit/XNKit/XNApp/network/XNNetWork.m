@@ -1175,6 +1175,7 @@ static inline NSString *cachePath() {
     return _hub;
 }
 
+
 - (void)hudWasHidden:(MBProgressHUD *)hud {
     self.hub = nil;
 }
